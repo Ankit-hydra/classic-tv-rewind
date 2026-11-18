@@ -62,3 +62,34 @@ h1,h2,h3{font-family:var(--serif);line-height:1.12;margin:0 0 .6em;text-wrap:bal
 .legal{border-top:1px solid rgba(247,241,231,.3);padding:1rem 0;font-size:.85rem}
 @media(max-width:700px){.foot-in{grid-template-columns:1fr}.pn{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+
+/* Small-screen refinements */
+html,body{max-width:100%;overflow-x:clip}
+button,a{touch-action:manipulation}
+@media(max-width:480px){
+  body{font-size:1rem;line-height:1.6}
+  .wrap{width:min(1160px,100% - 1.5rem)}
+  .strip{font-size:.75rem;padding:.45rem .75rem}
+  .mast-in{gap:.75rem;padding:.85rem 0}
+  .logo{gap:.55rem;min-width:0}
+  .logo svg{width:36px;height:auto;flex:0 0 36px}
+  .logo b{font-size:clamp(1.35rem,7vw,1.75rem)}
+  .logo i{font-size:.8rem}
+  .menu-btn{padding:.55rem .9rem}
+  .hero{padding:2rem 0 1rem;gap:1.5rem}
+  .tv{padding:.85rem;border-radius:22px;gap:.75rem;margin-top:1.25rem}
+  .screen{padding:1.25rem;border-radius:28px/24px}
+  .screen h1{font-size:clamp(1.8rem,9vw,2.5rem)}
+  .sect{padding:1.75rem 0}
+  .sh{font-size:1.55rem}
+  .grid{grid-template-columns:minmax(0,1fr);gap:1rem}
+  .card{padding:1.1rem}
+  .art-head h1{font-size:clamp(2rem,9vw,2.8rem)}
+  .prose{font-size:1.08rem;line-height:1.75}
+  .toc{padding:.85rem 1rem}
+  .pn{gap:.65rem}
+  .pn a{padding:.8rem;font-size:1rem}
+  .news{padding:1.25rem}
+  .foot-in{gap:1.4rem;padding:1.8rem 0}
+}
