@@ -110,3 +110,31 @@ button,a{touch-action:manipulation}
 .support-coming{display:block;margin-top:auto;padding:.7rem .8rem;text-align:center;border:1px solid var(--burg);background:var(--burg);color:#fff;font-size:.88rem;font-weight:700;border-radius:3px;opacity:.78;cursor:not-allowed}
 .support-note{font-size:.88rem;color:var(--muted);margin:1rem 0 0}
 @media(max-width:760px){.support-tiers{grid-template-columns:1fr}.support-tier{padding:1.15rem}.support-price{font-size:2.1rem}}
+
+
+/* Bold Ko-fi-inspired support banner and polished membership cards */
+.support-section{padding-top:3rem;padding-bottom:3rem}
+.support-intro{font-size:1.08rem}
+.support-hero{display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:clamp(1.4rem,4vw,2.5rem);margin:1.5rem 0 1.7rem;background:linear-gradient(120deg,#ff5e5b 0%,#f04450 58%,#d93649 100%);color:#fff;border-radius:16px;box-shadow:0 14px 30px -18px rgba(125,25,38,.55);position:relative;overflow:hidden}
+.support-hero:after{content:"";position:absolute;width:240px;height:240px;border:1px solid rgba(255,255,255,.17);border-radius:50%;right:18%;top:-150px;box-shadow:0 0 0 24px rgba(255,255,255,.05),0 0 0 48px rgba(255,255,255,.04);pointer-events:none}
+.support-hero-copy{position:relative;z-index:1;max-width:560px}
+.support-kicker{font-size:.72rem;font-weight:800;letter-spacing:.16em;color:#fff4df}
+.support-hero-copy h3{font-size:clamp(1.8rem,4vw,2.65rem);margin:.45rem 0;color:#fff}
+.support-hero-copy p{margin:0;color:#fff;font-size:1rem;max-width:52ch}
+.support-hero-cta{position:relative;z-index:1;flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.25rem;min-width:205px;padding:1rem 1.4rem;border:2px solid rgba(255,255,255,.85);border-radius:10px;background:#fff;color:#e74650;font-weight:800;font-size:1.05rem;text-align:center;box-shadow:0 5px 0 rgba(125,25,38,.18);cursor:not-allowed}
+.support-hero-cta>span{font-size:1.55rem;line-height:1}
+.support-hero-cta small{font-size:.72rem;font-weight:600;color:#87505a}
+.support-tiers{gap:1.25rem}
+.support-tier{position:relative;border:1px solid #e6d7c9;border-top:0;border-radius:12px;padding:1.55rem;background:linear-gradient(180deg,#fffdf9 0%,#fff8ef 100%);box-shadow:0 8px 24px -20px rgba(37,35,33,.55);transition:transform .2s,box-shadow .2s}
+.support-tier:hover{transform:translateY(-4px);box-shadow:0 16px 30px -20px rgba(37,35,33,.48)}
+.support-tier:before{content:"";position:absolute;inset:0 0 auto;height:5px;border-radius:12px 12px 0 0;background:#b08a4a}
+.support-featured{border:2px solid #f05a5d;background:#fff}
+.support-featured:before{height:6px;background:#f05a5d}
+.support-label{display:inline-flex;align-self:flex-start;padding:.3rem .65rem;border-radius:99px;background:#f2e6d6;color:#6b2732;font-size:.7rem;letter-spacing:.1em}
+.support-featured .support-label{background:#ffeded;color:#d83f4a}
+.support-tier h3{font-size:1.5rem}
+.support-price{font-size:2.65rem}
+.support-coming{border:0;border-radius:8px;background:#ff5e5b;box-shadow:0 4px 0 #d83f4a;color:#fff;padding:.85rem 1rem;opacity:1}
+.support-featured .support-coming{background:#651f2b;box-shadow:0 4px 0 #42131c}
+.support-note{padding:.8rem 1rem;border-left:3px solid #ff5e5b;background:#fff3ed;border-radius:0 6px 6px 0}
+@media(max-width:760px){.support-hero{flex-direction:column;align-items:stretch;gap:1.2rem;border-radius:12px}.support-hero-cta{width:100%;min-width:0}.support-tier:hover{transform:none}}
