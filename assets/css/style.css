@@ -93,3 +93,20 @@ button,a{touch-action:manipulation}
   .news{padding:1.25rem}
   .foot-in{gap:1.4rem;padding:1.8rem 0}
 }
+
+
+/* Monthly membership support section */
+.support-intro{max-width:680px;margin:-.4rem 0 1.5rem}
+.support-tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;align-items:stretch}
+.support-tier{display:flex;flex-direction:column;background:#fffaf1;border:1px solid var(--beige);border-top:4px solid var(--gold);padding:1.35rem;min-width:0}
+.support-tier h3{font-size:1.45rem;color:var(--burg);margin:.65rem 0 .25rem}
+.support-label{font-size:.75rem;letter-spacing:.12em;font-weight:800;color:var(--muted)}
+.support-price{font:700 2.35rem/1.15 var(--serif);color:var(--burg);margin:.45rem 0 .8rem}
+.support-price span{font:500 .95rem var(--sans);color:var(--muted)}
+.support-tier ul{padding-left:1.15rem;margin:.2rem 0 1.2rem}
+.support-tier li{margin:.35rem 0}
+.support-featured{border-top-color:var(--burg);box-shadow:0 8px 22px -18px rgba(37,35,33,.65)}
+.support-featured .support-label{color:var(--burg)}
+.support-coming{display:block;margin-top:auto;padding:.7rem .8rem;text-align:center;border:1px solid var(--beige);background:var(--beige);color:var(--muted);font-size:.88rem;font-weight:700;border-radius:3px}
+.support-note{font-size:.88rem;color:var(--muted);margin:1rem 0 0}
+@media(max-width:760px){.support-tiers{grid-template-columns:1fr}.support-tier{padding:1.15rem}.support-price{font-size:2.1rem}}
