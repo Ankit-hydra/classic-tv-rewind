@@ -167,6 +167,10 @@ body.support-modal-open{overflow:hidden}
 .ctr-kofi-float{position:fixed;top:18px;right:18px;z-index:9999;display:flex;align-items:center;gap:8px;padding:9px 13px 9px 10px;border:3px solid #f4e7c9;border-radius:13px;background:#d94b3d;color:#fff;text-decoration:none;font:700 13px/1.1 var(--sans,Arial,sans-serif);box-shadow:0 5px 0 #812d28,0 8px 18px rgba(0,0,0,.3);transition:transform .18s,box-shadow .18s}
 .ctr-kofi-float svg{display:block;width:36px;height:32px;flex:0 0 auto;color:#fff7e8}
 .ctr-kofi-float span{white-space:nowrap}
+.ctr-kofi-float{position:fixed;isolation:isolate;overflow:hidden}
+.ctr-kofi-float::after{content:"";position:absolute;top:-65%;bottom:-65%;left:-85%;width:58%;z-index:1;pointer-events:none;background:linear-gradient(105deg,transparent 0%,rgba(255,255,255,.08) 25%,rgba(255,255,255,.8) 50%,rgba(255,255,255,.12) 72%,transparent 100%);transform:skewX(-24deg);animation:supportUsShine 2.3s linear infinite}
+.ctr-kofi-float svg,.ctr-kofi-float span{position:relative;z-index:2}
+@keyframes supportUsShine{0%{left:-85%}100%{left:145%}}
 .ctr-kofi-float:hover{transform:translateY(-2px);box-shadow:0 7px 0 #812d28,0 11px 22px rgba(0,0,0,.32);color:#fff}
 .ctr-kofi-float:focus-visible{outline:3px solid #fff;outline-offset:4px}
 @media(max-width:600px){.ctr-kofi-float{top:12px;right:12px;padding:7px 10px 7px 8px;gap:6px;font-size:12px}.ctr-kofi-float svg{width:30px;height:27px}}
