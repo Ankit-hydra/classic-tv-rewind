@@ -7,14 +7,14 @@ Static editorial site: plain HTML, CSS and JavaScript. No build step. Works on G
 2. Click **New repository**. Name it `classic-tv-rewind`, set it to **Public**, and create it.
 3. Click **uploading an existing file**. Unzip this project and drag in the CONTENTS (index.html, the folders, etc.), not the outer folder. Click **Commit changes**.
 4. Go to **Settings > Pages**. Under **Build and deployment**, choose **Deploy from a branch**, branch `main`, folder `/ (root)`, then **Save**.
-5. Wait a minute or two. Your site will be at `https://YOUR-USERNAME.github.io/classic-tv-rewind/`.
-6. Replace the placeholder URL: search all files for `https://YOUR-USERNAME.github.io/classic-tv-rewind` and replace it with your real address (canonical tags, Open Graph, JSON-LD, sitemap.xml, robots.txt). Also replace `editor@example.com` with a real email.
+5. Wait a minute or two. Your site will be at `https://ankit-hydra.github.io/classic-tv-rewind/`.
+6. Replace the placeholder URL: search all files for `https://ankit-hydra.github.io/classic-tv-rewind` and replace it with your real address (canonical tags, Open Graph, JSON-LD, sitemap.xml, robots.txt). Also replace `editor@example.com` with a real email.
 7. Submit `sitemap.xml` in Google Search Console.
 
 All links are relative, so the project subpath works.
 
-## Editorial TODOs
-Search every file for `TODO`. These mark facts to verify, author names to add and citations to supply. Do not publish unverified claims.
+## Editorial review
+Before applying for AdSense, review article facts against reliable sources, add citations where appropriate, and replace generic editor attribution with the real author/editor identity. Hidden HTML comments are editorial reminders, not proof that claims have been verified.
 
 ## Images
 No copyrighted images are included. Add only original or licensed images to `assets/images/` and record each license.
@@ -31,4 +31,4 @@ Ad containers exist in articles and the homepage, marked `ADSENSE` in comments a
 - [ ] Each page has a unique title and description; canonical URLs updated.
 - [ ] Test JSON-LD in Google's Rich Results Test.
 - [ ] `/sitemap.xml` and `/robots.txt` load with your real URL.
-- [ ] No leftover `example.com` or `YOUR-USERNAME`.
+- [x] No leftover `example.com` or `YOUR-USERNAME` in the published site files.
