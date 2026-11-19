@@ -187,3 +187,12 @@ body.support-modal-open{overflow:hidden}
 /* Clear payment reassurance beneath each Ko-fi membership button */
 .support-secure-note{margin:.8rem 0 0;color:var(--muted);font-size:.78rem;line-height:1.5;text-align:center}
 .support-secure-note::before{content:"✓ ";font-weight:800;color:#28734b}
+
+
+/* Prominent home-page Donate shortcut beside the retro TV logo */
+.header-donate{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;background:var(--burg);color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem;letter-spacing:.02em;padding:.85rem 1.45rem;border:2px solid var(--gold);border-radius:999px;box-shadow:0 5px 14px rgba(37,35,33,.16);transition:transform .18s ease,background .18s ease}
+.header-donate:hover{background:#7b2a38;transform:translateY(-2px)}
+.header-donate:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+html{scroll-behavior:smooth}
+#support{scroll-margin-top:1.25rem}
+@media(max-width:520px){.header-donate{font-size:1rem;padding:.65rem 1rem;order:2}.mast-in .menu-btn{order:3}.mast-in #site-nav{order:4}}
