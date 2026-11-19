@@ -44,4 +44,16 @@
   if(c){c.addEventListener('click',function(){
     if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(location.href).then(function(){say('Link copied')},function(){say('Copy failed. Copy the address bar link.')})}
     else{var t=document.createElement('textarea');t.value=location.href;document.body.appendChild(t);t.select();try{document.execCommand('copy');say('Link copied')}catch(e){say('Copy the address bar link.')}document.body.removeChild(t)}})}
+  // Ko-fi floating tip button (loaded on every page that uses this shared script)
+  var koFiWidgetScript=document.createElement('script');
+  koFiWidgetScript.src='https://storage.ko-fi.com/cdn/widget/Widget_2.js';
+  koFiWidgetScript.async=true;
+  koFiWidgetScript.onload=function(){
+    if(window.kofiwidget2){
+      window.kofiwidget2.init('Leave a Tip','#D94B3D','U5O32AWBFY');
+      window.kofiwidget2.draw();
+    }
+  };
+  document.body.appendChild(koFiWidgetScript);
+
 })();
