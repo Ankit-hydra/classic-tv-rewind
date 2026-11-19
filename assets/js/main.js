@@ -52,7 +52,7 @@
     koFiLink.href='https://ko-fi.com/classictvrewind';
     koFiLink.target='_blank';
     koFiLink.rel='noopener noreferrer';
-    koFiLink.innerHTML='<svg viewBox="0 0 48 42" aria-hidden="true" focusable="false"><path d="M11 10 5 2M29 10l7-8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><rect x="3" y="10" width="38" height="27" rx="5" fill="none" stroke="currentColor" stroke-width="3"/><rect x="8" y="15" width="22" height="16" rx="2" fill="currentColor" opacity=".2"/><path d="M13 23h12M19 17v12M34 18h3M34 24h3M34 30h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Leave a Tip</span>';
+    koFiLink.innerHTML='<svg viewBox="0 0 48 42" aria-hidden="true" focusable="false"><path d="M11 10 5 2M29 10l7-8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><rect x="3" y="10" width="38" height="27" rx="5" fill="none" stroke="currentColor" stroke-width="3"/><rect x="8" y="15" width="22" height="16" rx="2" fill="currentColor" opacity=".2"/><path d="M13 23h12M19 17v12M34 18h3M34 24h3M34 30h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Buy me a Coffee</span>';
     koFiLink.setAttribute('aria-label','Leave a one-time tip on Ko-fi');
     document.body.appendChild(koFiLink);
   }
