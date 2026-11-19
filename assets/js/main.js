@@ -29,7 +29,7 @@
     try{alreadySeen=sessionStorage.getItem('ctrSupportPopupSeen')==='1'}catch(e){}
     if(!alreadySeen){
       window.setTimeout(function(){
-        if(!supportClosed&&!supportModal.hidden)return;
+        if(supportClosed||alreadySeen)return;
         supportModal.hidden=false;
         document.body.classList.add('support-modal-open');
         var closeButton=supportModal.querySelector('.support-modal-close');
