@@ -182,3 +182,8 @@ body.support-modal-open{overflow:hidden}
 @keyframes memberTickerLoop{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(max-width:600px){.member-ticker{height:34px;font-size:.74rem}.member-ticker-track{gap:2.5rem;animation-duration:20s}}
 @media(prefers-reduced-motion:reduce){.member-ticker{height:auto;min-height:36px;padding:.45rem .8rem;white-space:normal;text-align:center}.member-ticker-track{display:block;width:auto;height:auto;animation:none}.member-ticker-track>span{display:inline;width:auto;white-space:normal}.member-ticker-track>span+span{display:none}}
+
+
+/* Clear payment reassurance beneath each Ko-fi membership button */
+.support-secure-note{margin:.8rem 0 0;color:var(--muted);font-size:.78rem;line-height:1.5;text-align:center}
+.support-secure-note::before{content:"✓ ";font-weight:800;color:#28734b}
