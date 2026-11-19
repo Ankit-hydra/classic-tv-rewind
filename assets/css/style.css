@@ -189,29 +189,26 @@ body.support-modal-open{overflow:hidden}
 .support-secure-note::before{content:"✓ ";font-weight:800;color:#28734b}
 
 
-/* Tall shining Donate button placed directly beside the retro TV */
-.hero{grid-template-columns:minmax(0,1fr) 260px 190px;align-items:center}
-.hero-donate{position:relative;isolation:isolate;overflow:hidden;min-height:250px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;padding:2rem 1.1rem;border:2px solid #d6b36b;border-radius:20px;background:linear-gradient(145deg,#8b2638 0%,#651f2b 52%,#43131d 100%);color:#fff;text-decoration:none;text-align:center;box-shadow:0 12px 28px rgba(55,17,25,.28),inset 0 0 0 1px rgba(255,255,255,.12);transition:transform .2s ease,box-shadow .2s ease}
-.hero-donate:hover{transform:translateY(-4px);box-shadow:0 18px 34px rgba(55,17,25,.34),inset 0 0 0 1px rgba(255,255,255,.16)}
-.hero-donate-heart{font-size:2.2rem;line-height:1;color:#f3d38f;text-shadow:0 0 14px rgba(255,226,159,.55)}
-.hero-donate-label{font:800 clamp(1.65rem,2.2vw,2.15rem)/1 var(--serif);letter-spacing:.12em;text-shadow:0 2px 10px rgba(0,0,0,.25)}
-.hero-donate-caption{max-width:145px;font-size:.88rem;line-height:1.4;color:#f7e8d0}
-.hero-donate-shine{position:absolute;inset:-40% auto -40% -65%;width:45%;transform:skewX(-22deg);background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),rgba(255,255,255,.34),rgba(255,255,255,.06),transparent);animation:donateShine 3.2s ease-in-out infinite;pointer-events:none;z-index:-1}
+/* Wide shining Donate button directly underneath the retro TV */
+.hero-donate{box-sizing:border-box!important;grid-column:1!important;grid-row:2!important;position:relative!important;isolation:isolate!important;overflow:hidden!important;display:flex!important;visibility:visible!important;opacity:1!important;align-self:stretch!important;justify-self:stretch!important;width:100%!important;min-width:0!important;min-height:112px!important;flex-direction:row!important;align-items:center!important;justify-content:center!important;gap:16px!important;margin-top:0!important;padding:20px 24px!important;border:3px solid #d6b36b!important;border-radius:20px!important;background:linear-gradient(145deg,#8b2638,#651f2b 55%,#43131d)!important;color:#fff!important;text-decoration:none!important;text-align:center!important;font-weight:800!important;box-shadow:0 12px 28px rgba(55,17,25,.3),inset 0 0 0 1px rgba(255,255,255,.14)!important;transition:transform .2s ease,box-shadow .2s ease!important}
+.hero-donate:hover{transform:translateY(-3px);box-shadow:0 18px 34px rgba(55,17,25,.34),inset 0 0 0 1px rgba(255,255,255,.16)}
+.hero-donate-heart{display:block!important;color:#f3d38f!important;font-size:2.25rem!important;line-height:1!important;text-shadow:0 0 14px rgba(255,226,159,.55)}
+.hero-donate-label{display:block!important;color:#fff!important;font:900 2rem/1.1 var(--serif)!important;letter-spacing:.14em!important;text-shadow:0 2px 10px rgba(0,0,0,.25)}
+.hero-donate-caption{display:block!important;color:#f7e8d0!important;font-size:.92rem!important;line-height:1.4!important;max-width:none!important}
+.hero-donate-shine{display:block!important;position:absolute!important;top:-40%!important;bottom:-40%!important;left:-70%!important;width:45%!important;z-index:0!important;pointer-events:none!important;background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),rgba(255,255,255,.42),rgba(255,255,255,.08),transparent)!important;transform:skewX(-22deg)!important;animation:donateShine 2.8s ease-in-out infinite!important}
+.hero-donate>*:not(.hero-donate-shine){position:relative!important;z-index:1!important}
 @keyframes donateShine{0%{left:-70%}65%,100%{left:135%}}
 .hero-donate:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
-@media(max-width:1000px){.hero{grid-template-columns:minmax(0,1fr) 220px}.hero-donate{grid-column:1/-1;min-height:110px;flex-direction:row;gap:1rem;padding:1.2rem 1.5rem}.hero-donate-caption{max-width:none}}
-@media(max-width:650px){.hero{grid-template-columns:1fr}.hero-donate{grid-column:auto;min-height:100px}}
+.hero-side{grid-column:2!important;grid-row:1 / span 2!important;align-self:start!important}
 html{scroll-behavior:smooth}
 #support{scroll-margin-top:1.25rem}
-
-
-/* Strong, explicit hero Donate styling to prevent generic link rules overriding it */
-.hero > .hero-donate{box-sizing:border-box!important;display:flex!important;visibility:visible!important;opacity:1!important;position:relative!important;align-self:center!important;justify-self:stretch!important;min-width:180px!important;min-height:255px!important;width:100%!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:14px!important;padding:28px 18px!important;border:3px solid #d6b36b!important;border-radius:22px!important;background:linear-gradient(145deg,#8b2638,#651f2b 55%,#43131d)!important;color:#fff!important;text-decoration:none!important;text-align:center!important;font-weight:800!important;box-shadow:0 12px 28px rgba(55,17,25,.3),inset 0 0 0 1px rgba(255,255,255,.14)!important;overflow:hidden!important}
-.hero > .hero-donate .hero-donate-label{display:block!important;color:#fff!important;font-size:2rem!important;line-height:1.1!important;letter-spacing:.14em!important;font-weight:900!important}
-.hero > .hero-donate .hero-donate-heart{display:block!important;color:#f3d38f!important;font-size:2.4rem!important;line-height:1!important}
-.hero > .hero-donate .hero-donate-caption{display:block!important;color:#f7e8d0!important;font-size:.9rem!important;line-height:1.4!important;max-width:150px!important}
-.hero > .hero-donate .hero-donate-shine{display:block!important;position:absolute!important;top:-40%!important;bottom:-40%!important;left:-70%!important;width:45%!important;z-index:0!important;pointer-events:none!important;background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),rgba(255,255,255,.42),rgba(255,255,255,.08),transparent)!important;transform:skewX(-22deg)!important;animation:donateShine 2.8s ease-in-out infinite!important}
-.hero > .hero-donate>*:not(.hero-donate-shine){position:relative!important;z-index:1!important}
-@media(max-width:1000px){.hero{grid-template-columns:minmax(0,1fr) 220px 180px!important}.hero > .hero-donate{grid-column:auto!important;min-height:220px!important}}
-@media(max-width:900px){.hero{grid-template-columns:minmax(0,1fr) 180px!important}.hero > .hero-donate{grid-column:2!important;grid-row:1!important;min-height:210px!important}.hero-side{grid-column:1/-1!important}}
-@media(max-width:600px){.hero{grid-template-columns:1fr!important}.hero > .hero-donate{grid-column:1!important;grid-row:auto!important;min-height:105px!important;flex-direction:row!important;gap:12px!important}.hero > .hero-donate .hero-donate-caption{max-width:none!important}}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr!important}
+  .hero-donate{grid-column:1!important;grid-row:2!important;min-height:105px!important;flex-direction:row!important;gap:12px!important;padding:18px 14px!important}
+  .hero-side{grid-column:1!important;grid-row:3!important}
+}
+@media(max-width:600px){
+  .hero-donate{min-height:100px!important;flex-wrap:wrap!important;gap:10px!important;padding:16px 12px!important}
+  .hero-donate-label{font-size:1.65rem!important}
+  .hero-donate-caption{font-size:.82rem!important}
+}
