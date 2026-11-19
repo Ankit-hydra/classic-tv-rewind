@@ -194,6 +194,10 @@ body.support-modal-open{overflow:hidden}
 .tv{grid-column:1!important;grid-row:1 / span 2!important}
 .hero-side{grid-column:2!important;grid-row:1!important;align-self:start!important}
 .hero-donate{box-sizing:border-box!important;grid-column:2!important;grid-row:2!important;position:relative!important;isolation:isolate!important;overflow:hidden!important;display:flex!important;visibility:visible!important;opacity:1!important;align-self:stretch!important;justify-self:stretch!important;width:100%!important;min-width:0!important;min-height:112px!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:8px!important;margin-top:0!important;padding:18px 14px!important;border:3px solid #d6b36b!important;border-radius:20px!important;background:linear-gradient(145deg,#8b2638,#651f2b 55%,#43131d)!important;color:#fff!important;text-decoration:none!important;text-align:center!important;font-weight:800!important;box-shadow:0 12px 28px rgba(55,17,25,.3),inset 0 0 0 1px rgba(255,255,255,.14)!important;transition:transform .2s ease,box-shadow .2s ease!important}
+.hero-donate::after{content:"";position:absolute;top:-65%;bottom:-65%;left:-85%;width:58%;z-index:2;pointer-events:none;background:linear-gradient(105deg,transparent 0%,rgba(255,255,255,.08) 25%,rgba(255,255,255,.78) 50%,rgba(255,255,255,.12) 72%,transparent 100%);transform:skewX(-24deg);animation:donateShineStrong 2.1s linear infinite}
+.hero-donate>*{position:relative!important;z-index:3!important}
+.hero-donate .hero-donate-shine{display:none!important}
+@keyframes donateShineStrong{0%{left:-85%}100%{left:145%}}
 .hero-donate:hover{transform:translateY(-3px);box-shadow:0 18px 34px rgba(55,17,25,.34),inset 0 0 0 1px rgba(255,255,255,.16)}
 .hero-donate-heart{display:block!important;color:#f3d38f!important;font-size:2rem!important;line-height:1!important;text-shadow:0 0 14px rgba(255,226,159,.55)}
 .hero-donate-label{display:block!important;color:#fff!important;font:900 1.8rem/1.1 var(--serif)!important;letter-spacing:.14em!important;text-shadow:0 2px 10px rgba(0,0,0,.25)}
