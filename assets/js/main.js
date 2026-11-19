@@ -44,16 +44,16 @@
   if(c){c.addEventListener('click',function(){
     if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(location.href).then(function(){say('Link copied')},function(){say('Copy failed. Copy the address bar link.')})}
     else{var t=document.createElement('textarea');t.value=location.href;document.body.appendChild(t);t.select();try{document.execCommand('copy');say('Link copied')}catch(e){say('Copy the address bar link.')}document.body.removeChild(t)}})}
-  // Lightweight floating Ko-fi link (no third-party script)
+  // Floating retro-TV tip button. Keep the destination on the one-time Ko-fi page (not /tiers).
   if(!document.getElementById('ctr-kofi-float')){
     var koFiLink=document.createElement('a');
     koFiLink.id='ctr-kofi-float';
+    koFiLink.className='ctr-kofi-float';
     koFiLink.href='https://ko-fi.com/classictvrewind';
     koFiLink.target='_blank';
     koFiLink.rel='noopener noreferrer';
-    koFiLink.textContent='☕ Buy me a coffee';
-    koFiLink.setAttribute('aria-label','Buy me a coffee on Ko-fi');
-    koFiLink.style.cssText='position:fixed;right:20px;bottom:20px;z-index:9999;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 17px;border-radius:999px;background:#D94B3D;color:#fff;font:600 14px/1.2 Arial,sans-serif;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.24);';
+    koFiLink.innerHTML='<svg viewBox="0 0 48 42" aria-hidden="true" focusable="false"><path d="M11 10 5 2M29 10l7-8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><rect x="3" y="10" width="38" height="27" rx="5" fill="none" stroke="currentColor" stroke-width="3"/><rect x="8" y="15" width="22" height="16" rx="2" fill="currentColor" opacity=".2"/><path d="M13 23h12M19 17v12M34 18h3M34 24h3M34 30h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Leave a Tip</span>';
+    koFiLink.setAttribute('aria-label','Leave a one-time tip on Ko-fi');
     document.body.appendChild(koFiLink);
   }
 
