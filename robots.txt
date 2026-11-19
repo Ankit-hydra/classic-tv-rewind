@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ankit-hydra.github.io/classic-tv-rewind/sitemap.xml
+Sitemap: https://classictvrewind.github.io/classic-tv-rewind/sitemap.xml
