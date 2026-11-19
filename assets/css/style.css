@@ -161,3 +161,12 @@ button,a{touch-action:manipulation}
 .support-modal-footnote{font-size:.75rem!important;color:#76665c;margin:.7rem auto 0!important}
 body.support-modal-open{overflow:hidden}
 @media(max-width:420px){.support-modal-panel{padding:1.5rem 1rem}.support-modal-plans{gap:.35rem}.support-modal-plans>div{padding:.7rem .25rem}.support-modal-plans strong{font-size:.7rem}.support-modal-plans b{font-size:1.35rem}}
+
+
+/* Floating retro-TV Ko-fi tip button */
+.ctr-kofi-float{position:fixed;top:18px;right:18px;z-index:9999;display:flex;align-items:center;gap:8px;padding:9px 13px 9px 10px;border:3px solid #f4e7c9;border-radius:13px;background:#d94b3d;color:#fff;text-decoration:none;font:700 13px/1.1 var(--sans,Arial,sans-serif);box-shadow:0 5px 0 #812d28,0 8px 18px rgba(0,0,0,.3);transition:transform .18s,box-shadow .18s}
+.ctr-kofi-float svg{display:block;width:36px;height:32px;flex:0 0 auto;color:#fff7e8}
+.ctr-kofi-float span{white-space:nowrap}
+.ctr-kofi-float:hover{transform:translateY(-2px);box-shadow:0 7px 0 #812d28,0 11px 22px rgba(0,0,0,.32);color:#fff}
+.ctr-kofi-float:focus-visible{outline:3px solid #fff;outline-offset:4px}
+@media(max-width:600px){.ctr-kofi-float{top:12px;right:12px;padding:7px 10px 7px 8px;gap:6px;font-size:12px}.ctr-kofi-float svg{width:30px;height:27px}}
