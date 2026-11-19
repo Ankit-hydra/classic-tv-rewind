@@ -170,3 +170,14 @@ body.support-modal-open{overflow:hidden}
 .ctr-kofi-float:hover{transform:translateY(-2px);box-shadow:0 7px 0 #812d28,0 11px 22px rgba(0,0,0,.32);color:#fff}
 .ctr-kofi-float:focus-visible{outline:3px solid #fff;outline-offset:4px}
 @media(max-width:600px){.ctr-kofi-float{top:12px;right:12px;padding:7px 10px 7px 8px;gap:6px;font-size:12px}.ctr-kofi-float svg{width:30px;height:27px}}
+
+
+/* Slim scrolling membership announcement bar */
+.member-ticker{display:flex;align-items:center;gap:3rem;overflow:hidden;white-space:nowrap;width:100%;padding:.38rem 0;background:#651f2b;color:#fff4df;text-decoration:none;border-bottom:2px solid #b08a4a;font-size:.82rem;font-weight:700;letter-spacing:.025em}
+.member-ticker span{flex:0 0 auto;min-width:100%;text-align:center;animation:memberTickerScroll 25s linear infinite}
+.member-ticker span+span{margin-left:-100%}
+.member-ticker:hover{color:#fff;background:#7b2937}
+.member-ticker:hover span{animation-play-state:paused}
+.member-ticker:focus-visible{outline:3px solid #b08a4a;outline-offset:-3px}
+@keyframes memberTickerScroll{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+@media(prefers-reduced-motion:reduce){.member-ticker span{animation:none}.member-ticker span+span{display:none}}
