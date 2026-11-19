@@ -172,47 +172,13 @@ body.support-modal-open{overflow:hidden}
 @media(max-width:600px){.ctr-kofi-float{top:12px;right:12px;padding:7px 10px 7px 8px;gap:6px;font-size:12px}.ctr-kofi-float svg{width:30px;height:27px}}
 
 
-/* Smooth, continuous scrolling membership announcement bar */
-.member-ticker{
-  position:relative;
-  display:block;
-  width:100%;
-  height:36px;
-  overflow:hidden;
-  padding:0;
-  white-space:nowrap;
-  background:#651f2b;
-  color:#fff4df;
-  text-decoration:none;
-  border-bottom:2px solid #b08a4a;
-  font-size:.82rem;
-  font-weight:700;
-  letter-spacing:.025em;
-}
-.member-ticker span{
-  position:absolute;
-  top:50%;
-  left:0;
-  display:block;
-  width:max-content;
-  min-width:0;
-  transform:translateY(-50%);
-  animation:memberTickerScroll 24s linear infinite;
-  will-change:transform;
-}
-.member-ticker span+span{animation-delay:-12s}
+/* Seamless continuous membership ticker */
+.member-ticker{display:block;width:100%;height:36px;overflow:hidden;padding:0;white-space:nowrap;background:#651f2b;color:#fff4df;text-decoration:none;border-bottom:2px solid #b08a4a;font-size:.82rem;font-weight:700;letter-spacing:.025em}
+.member-ticker-track{display:flex;align-items:center;width:max-content;height:100%;gap:4rem;animation:memberTickerLoop 24s linear infinite;will-change:transform}
+.member-ticker-track>span{display:block;flex:0 0 auto;width:max-content}
 .member-ticker:hover{color:#fff;background:#7b2937}
-.member-ticker:hover span{animation-play-state:paused}
+.member-ticker:hover .member-ticker-track{animation-play-state:paused}
 .member-ticker:focus-visible{outline:3px solid #b08a4a;outline-offset:-3px}
-@keyframes memberTickerScroll{
-  from{transform:translate(100vw,-50%)}
-  to{transform:translate(-100%,-50%)}
-}
-@media(max-width:600px){
-  .member-ticker{height:34px;font-size:.74rem}
-}
-@media(prefers-reduced-motion:reduce){
-  .member-ticker{height:auto;min-height:36px;padding:.45rem .8rem;white-space:normal;text-align:center}
-  .member-ticker span{position:static;width:auto;transform:none;animation:none}
-  .member-ticker span+span{display:none}
-}
+@keyframes memberTickerLoop{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:600px){.member-ticker{height:34px;font-size:.74rem}.member-ticker-track{gap:2.5rem;animation-duration:20s}}
+@media(prefers-reduced-motion:reduce){.member-ticker{height:auto;min-height:36px;padding:.45rem .8rem;white-space:normal;text-align:center}.member-ticker-track{display:block;width:auto;height:auto;animation:none}.member-ticker-track>span{display:inline;width:auto;white-space:normal}.member-ticker-track>span+span{display:none}}
