@@ -50,7 +50,7 @@
   koFiWidgetScript.async=true;
   koFiWidgetScript.onload=function(){
     if(window.kofiwidget2){
-      window.kofiwidget2.init('Leave a Tip','#D94B3D','U5O32AWBFY');
+      window.kofiwidget2.init('Buy me a coffee','#D94B3D','U5O32AWBFY');
       window.kofiwidget2.draw();
     }
   };
