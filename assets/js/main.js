@@ -2,6 +2,16 @@
   var btn=document.querySelector('.menu-btn'),nav=document.getElementById('site-nav');
   if(btn&&nav){btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o)});nav.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false')})});
     document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.focus()}})}
+
+  // Keep the article contents expanded on desktop and collapsed by default on phones.
+  var tocDetails=document.querySelectorAll('.toc-dropdown');
+  if(tocDetails.length){
+    var tocMobile=window.matchMedia('(max-width: 959px)');
+    var syncToc=function(){tocDetails.forEach(function(toc){toc.open=!tocMobile.matches})};
+    syncToc();
+    if(tocMobile.addEventListener)tocMobile.addEventListener('change',syncToc);
+    else if(tocMobile.addListener)tocMobile.addListener(syncToc);
+  }
   var y=document.getElementById('yr');if(y)y.textContent=new Date().getFullYear();
   var supportModal=document.getElementById('support-modal');
   if(supportModal){
