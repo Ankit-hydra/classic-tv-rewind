@@ -42,6 +42,20 @@ h1,h2,h3{font-family:var(--serif);line-height:1.12;margin:0 0 .6em;text-wrap:bal
 .badge{display:inline-block;background:var(--beige);color:var(--burg);border:1px solid var(--gold);padding:.1rem .7rem;border-radius:99px;font-size:.85rem;font-weight:600;text-decoration:none}
 .meta{color:var(--muted);font-size:.9rem}
 .feat{display:grid;grid-template-columns:1fr 1.3fr;gap:2rem}.feat-lead h3{font-size:2rem}.feat-list{display:grid;gap:1.2rem}@media(max-width:860px){.feat{grid-template-columns:1fr}}
+
+/* Small archival Lucille Ball collage in the featured-story column */
+.lucy-scrapbook{position:relative;display:grid;grid-template-columns:1.08fr .82fr;grid-template-rows:170px 170px;gap:1.1rem;max-width:390px;margin:2.2rem auto 1.4rem;padding:1.2rem 1.1rem 2.2rem;background:rgba(255,250,241,.55);border:1px solid rgba(176,138,74,.38);box-shadow:0 5px 18px rgba(62,39,27,.07);transform:rotate(-.6deg)}
+.scrap-photo{position:relative;margin:0;padding:.48rem .48rem .9rem;background:#fffdf7;border:1px solid #e4dac8;box-shadow:0 4px 10px rgba(35,25,18,.16);overflow:hidden}
+.scrap-photo img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06) sepia(.12);border:1px solid rgba(70,55,40,.12)}
+.scrap-photo figcaption{position:absolute;bottom:.16rem;left:.45rem;right:.45rem;font:italic .67rem/1.1 var(--serif);color:#65594d;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.scrap-main{grid-row:1 / span 2;transform:rotate(-2deg);align-self:center;height:285px}
+.scrap-small{height:145px}
+.scrap-top{transform:rotate(2.4deg);align-self:end}
+.scrap-bottom{transform:rotate(-1.5deg);align-self:start}
+.scrap-note{position:absolute;right:1.15rem;bottom:.28rem;font:italic .78rem/1.05 var(--serif);letter-spacing:.04em;color:#8a6b45;text-align:center;transform:rotate(-4deg)}
+@media(max-width:860px){.lucy-scrapbook{max-width:430px;margin:1.6rem auto 1rem;grid-template-rows:150px 150px}.scrap-main{height:255px}.scrap-small{height:130px}}
+@media(max-width:420px){.lucy-scrapbook{max-width:340px;gap:.75rem;padding:.9rem .8rem 2rem;grid-template-rows:130px 130px}.scrap-main{height:225px}.scrap-small{height:112px}}
+
 .band{background:var(--char);color:var(--beige);margin:2rem 0;border-block:6px double var(--gold)}.band h3{color:var(--ivory)}
 .three{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;margin-bottom:1.5rem}.three>div{border-left:2px solid var(--gold);padding-left:1rem}
 .trivia details{background:#fffaf1;border:1px solid var(--beige);padding:.9rem 1.2rem;margin-bottom:.7rem}.trivia summary{cursor:pointer;font:600 1.1rem var(--serif)}.trivia p{margin:.6rem 0 0;color:var(--burg);font-weight:600}
