@@ -223,3 +223,18 @@ html{scroll-behavior:smooth}
   .hero-donate-label{font-size:1.65rem!important}
   .hero-donate-caption{font-size:.82rem!important}
 }
+
+
+/* Article contents: collapsible only on small screens */
+.toc-dropdown>summary{display:none}
+@media(max-width:959px){
+  .toc-dropdown>summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;cursor:pointer;list-style:none;font:700 1.05rem var(--sans);color:var(--burg);padding:.8rem .9rem;border:1px solid var(--gold);background:#fffaf1;min-height:48px}
+  .toc-dropdown>summary::-webkit-details-marker{display:none}
+  .toc-dropdown>summary::after{content:"▾";font-size:1.1rem;transition:transform .18s ease}
+  .toc-dropdown[open]>summary::after{transform:rotate(180deg)}
+  .toc-dropdown>.toc-content{padding:.8rem .9rem .25rem}
+  .toc-dropdown .toc-content h2{display:none}
+  .toc-dropdown .toc-content ol{margin:0;padding-left:1.25rem}
+  .toc-dropdown .toc-content li{margin:.35rem 0}
+  .toc-dropdown .toc-content a{display:inline-block;padding:.12rem 0}
+}
